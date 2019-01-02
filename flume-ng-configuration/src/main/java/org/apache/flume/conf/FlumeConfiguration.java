@@ -684,7 +684,7 @@ public class FlumeConfiguration {
               throw new ConfigurationException("Channel " +
                   sinkConf.getChannel() + " not in active set.");
             }
-            if ((configSpecified && sinkConf.isNotFoundConfigClass()) ||
+            if ((configSpecified && !sinkConf.isNotFoundConfigClass()) ||
                 !configSpecified) {
               newContextMap.put(sinkName, sinkContext);
             } else if (configSpecified) {
